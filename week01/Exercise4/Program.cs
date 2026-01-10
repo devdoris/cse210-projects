@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 class Program
 {
@@ -6,7 +7,6 @@ class Program
     {
         List<int> numbers = new List<int>();
         
-
         int userNumber = -1;
         while (userNumber != 0)
         {
@@ -15,13 +15,11 @@ class Program
             string userResponse = Console.ReadLine();
             userNumber = int.Parse(userResponse);
             
-
             if (userNumber != 0)
             {
                 numbers.Add(userNumber);
             }
         }
-
 
         int total = 0;
         foreach (int number in numbers)
@@ -32,11 +30,10 @@ class Program
         Console.WriteLine($"The total is: {total}");
 
 
-
         float average = ((float)total) / numbers.Count;
         Console.WriteLine($"The average is: {average}");
 
-        
+
         
         int largest = numbers[0];
 
